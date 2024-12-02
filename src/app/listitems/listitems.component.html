@@ -6,4 +6,23 @@
       <img src="assets/triforce.png" alt="Logo" >
     </div>
   </main>
+
+  <table>
+    <tr>
+      <th>Nom</th>
+      <th>Description</th>
+      <th>Games</th>
+      <th>Total</th>
+      <th></th>
+    </tr>
+    <!--We loop through the articles-->
+    <tr *ngFor="let item of items;let i = index">
+      <td>{{ item.nom }}</td>
+      <td>{{ item.description }}</td>
+      <td>{{ item.games}}</td>
+    </tr>
+  </table>
+
+  <div>Total : {{ getTotal() }}</div>
+
 </div>
